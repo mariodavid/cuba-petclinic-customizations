@@ -2,6 +2,7 @@ package com.haulmont.sample.petclinic.web.pet.pet;
 
 import com.haulmont.cuba.gui.Route;
 import com.haulmont.cuba.gui.components.Action;
+import com.haulmont.cuba.gui.components.Filter;
 import com.haulmont.cuba.gui.components.LookupField;
 import com.haulmont.cuba.gui.components.Slider;
 import com.haulmont.cuba.gui.components.TextField;
@@ -40,4 +41,8 @@ public class PetBrowse extends StandardLookup<Pet> {
         birthDateFilterField.setValue(null);
     }
 
+    @Subscribe
+    public void onBeforeShow(BeforeShowEvent event) {
+        typeFilterField.setPopupWidth("400px");
+    }
 }

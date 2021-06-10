@@ -179,4 +179,15 @@
   @include calendar-event(event-blue, #249FAF, #BAF7FF);
 
 
+
+
+  // activate column selection icon also for non-active state
+
+  .v-table .v-table-column-selector:not(.v-disabled) {
+    color: var(--primary-color-shade-2);
+    border-color: var(--primary-color-shade-2);
+    background: transparent;
+    opacity: 1;
+    filter: none;
+  }
 }
